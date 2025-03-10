@@ -1,0 +1,17 @@
+{
+  "claude-3-sonnet": {
+    "generateText": "SUCCESS",
+    "generateWithContext": "SUCCESS",
+    "generateTextStream": "SUCCESS"
+  },
+  "gpt-4": {
+    "generateText": "SUCCESS",
+    "generateWithContext": "SUCCESS",
+    "generateTextStream": "SUCCESS"
+  },
+  "gemini-pro": {
+    "generateText": "FAILED",
+    "generateWithContext": "FAILED",
+    "generateTextStream": "FAILED"
+  }
+}

@@ -1,0 +1,1115 @@
+FAIL ../test/unit/agents/search-agent.test.ts
+  ● Test suite failed to run
+
+    [96m../test/unit/agents/search-agent.test.ts[0m:[93m155[0m:[93m73[0m - [91merror[0m[90m TS2345: [0mArgument of type '{ title: string; url: string; content: string; snippet: string; score: number; timestamp: string; }[]' is not assignable to parameter of type 'SearchResult[]'.
+      Type '{ title: string; url: string; content: string; snippet: string; score: number; timestamp: string; }' is missing the following properties from type 'SearchResult': source, metadata, content2, relevance
+
+    [7m155[0m       const context = await searchAgent.extractRelevantContext('テスト検索', mockSearchResults);
+    [7m   [0m [91m                                                                        ~~~~~~~~~~~~~~~~~[0m
+    [96m../test/unit/agents/search-agent.test.ts[0m:[93m166[0m:[93m73[0m - [91merror[0m[90m TS2345: [0mArgument of type '{ title: string; url: string; content: string; snippet: string; score: number; timestamp: string; }[]' is not assignable to parameter of type 'SearchResult[]'.
+      Type '{ title: string; url: string; content: string; snippet: string; score: number; timestamp: string; }' is missing the following properties from type 'SearchResult': source, metadata, content2, relevance
+
+    [7m166[0m       const context = await searchAgent.extractRelevantContext('テスト検索', mockSearchResults, maxLength);
+    [7m   [0m [91m                                                                        ~~~~~~~~~~~~~~~~~[0m
+
+FAIL ../test/unit/processors/html/html-processor.test.ts
+  ● Test suite failed to run
+
+    [96m../src/processors/html/html-processor.ts[0m:[93m5[0m:[93m24[0m - [91merror[0m[90m TS2307: [0mCannot find module '../utils/logger' or its corresponding type declarations.
+
+    [7m5[0m import { logger } from '../utils/logger';
+    [7m [0m [91m                       ~~~~~~~~~~~~~~~~~[0m
+    [96m../src/processors/html/html-processor.ts[0m:[93m6[0m:[93m37[0m - [91merror[0m[90m TS2307: [0mCannot find module '../errors/app-error' or its corresponding type declarations.
+
+    [7m6[0m import { AppError, ErrorCode } from '../errors/app-error';
+    [7m [0m [91m                                    ~~~~~~~~~~~~~~~~~~~~~[0m
+
+FAIL ../test/unit/search/search-cache.test.ts
+  ● Test suite failed to run
+
+    [96m../test/unit/search/search-cache.test.ts[0m:[93m24[0m:[93m29[0m - [91merror[0m[90m TS2559: [0mType '"/mock/cache/dir"' has no properties in common with type '{ cachePath?: string | undefined; cacheExpiry?: number | undefined; persistCacheInterval?: number | undefined; }'.
+
+    [7m24[0m     cache = new SearchCache(mockCacheDir);
+    [7m  [0m [91m                            ~~~~~~~~~~~~[0m
+
+FAIL ../test/unit/models/providers/openai-provider.test.ts
+  ● Test suite failed to run
+
+    [96m../test/unit/models/providers/openai-provider.test.ts[0m:[93m1[0m:[93m32[0m - [91merror[0m[90m TS2307: [0mCannot find module '../../../../src/models/providers/openai-provider' or its corresponding type declarations.
+
+    [7m1[0m import { OpenAIProvider } from '../../../../src/models/providers/openai-provider';
+    [7m [0m [91m                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+FAIL ../test/unit/processors/content-processor-service.test.ts
+  ● Test suite failed to run
+
+    [96m../test/unit/processors/content-processor-service.test.ts[0m:[93m63[0m:[93m36[0m - [91merror[0m[90m TS7006: [0mParameter 'r' implicitly has an 'any' type.
+
+    [7m63[0m         sources: searchResults.map(r => ({ title: r.title, url: r.url })),
+    [7m  [0m [91m                                   ~[0m
+    [96m../test/unit/processors/content-processor-service.test.ts[0m:[93m64[0m:[93m48[0m - [91merror[0m[90m TS7006: [0mParameter 'c' implicitly has an 'any' type.
+
+    [7m64[0m         contentSections: processedContents.map(c => ({
+    [7m  [0m [91m                                               ~[0m
+
+FAIL ../test/unit/agents/info-processor.test.ts
+  ● Test suite failed to run
+
+    [96m../test/unit/agents/info-processor.test.ts[0m:[93m57[0m:[93m64[0m - [91merror[0m[90m TS2345: [0mArgument of type '{ title: string; url: string; content: string; snippet: string; score: number; timestamp: string; }[]' is not assignable to parameter of type 'SearchResult[]'.
+      Type '{ title: string; url: string; content: string; snippet: string; score: number; timestamp: string; }' is missing the following properties from type 'SearchResult': source, metadata, content2, relevance
+
+    [7m57[0m       const result = await infoProcessor.processResults(query, mockSearchResults);
+    [7m  [0m [91m                                                               ~~~~~~~~~~~~~~~~~[0m
+    [96m../test/unit/agents/info-processor.test.ts[0m:[93m73[0m:[93m51[0m - [91merror[0m[90m TS2345: [0mArgument of type '{ title: string; url: string; content: string; snippet: string; score: number; timestamp: string; }[]' is not assignable to parameter of type 'SearchResult[]'.
+      Type '{ title: string; url: string; content: string; snippet: string; score: number; timestamp: string; }' is missing the following properties from type 'SearchResult': source, metadata, content2, relevance
+
+    [7m73[0m       await infoProcessor.processResults('テスト質問', mockSearchResults, 'test-model');
+    [7m  [0m [91m                                                  ~~~~~~~~~~~~~~~~~[0m
+    [96m../test/unit/agents/info-processor.test.ts[0m:[93m79[0m:[93m51[0m - [91merror[0m[90m TS2345: [0mArgument of type '{ title: string; url: string; content: string; snippet: string; score: number; timestamp: string; }[]' is not assignable to parameter of type 'SearchResult[]'.
+      Type '{ title: string; url: string; content: string; snippet: string; score: number; timestamp: string; }' is missing the following properties from type 'SearchResult': source, metadata, content2, relevance
+
+    [7m79[0m       await infoProcessor.processResults('テスト質問', mockSearchResults, undefined, OutputFormat.HTML);
+    [7m  [0m [91m                                                  ~~~~~~~~~~~~~~~~~[0m
+    [96m../test/unit/agents/info-processor.test.ts[0m:[93m127[0m:[93m67[0m - [91merror[0m[90m TS2345: [0mArgument of type '{ title: string; url: string; content: string; snippet: string; score: number; timestamp: string; }[]' is not assignable to parameter of type 'SearchResult[]'.
+      Type '{ title: string; url: string; content: string; snippet: string; score: number; timestamp: string; }' is missing the following properties from type 'SearchResult': source, metadata, content2, relevance
+
+    [7m127[0m       const result = await infoProcessor.extractKeyFacts('テスト質問', mockSearchResults);
+    [7m   [0m [91m                                                                  ~~~~~~~~~~~~~~~~~[0m
+    [96m../test/unit/agents/info-processor.test.ts[0m:[93m153[0m:[93m67[0m - [91merror[0m[90m TS2345: [0mArgument of type '{ title: string; url: string; content: string; snippet: string; score: number; timestamp: string; }[]' is not assignable to parameter of type 'SearchResult[]'.
+      Type '{ title: string; url: string; content: string; snippet: string; score: number; timestamp: string; }' is missing the following properties from type 'SearchResult': source, metadata, content2, relevance
+
+    [7m153[0m       const result = await infoProcessor.extractKeyFacts('テスト質問', mockSearchResults);
+    [7m   [0m [91m                                                                  ~~~~~~~~~~~~~~~~~[0m
+
+PASS ../test/unit/processors/ai/summarizer.test.ts (33.604 s)
+FAIL ../test/unit/search/search-service.test.ts
+  ● Test suite failed to run
+
+    ReferenceError: Cannot access 'MockGoogleSearchProvider' before initialization
+
+    [0m [90m 53 |[39m jest[33m.[39mmock([32m'../../../src/search/providers/google-search'[39m[33m,[39m () [33m=>[39m {
+     [90m 54 |[39m   [36mreturn[39m {
+    [31m[1m>[22m[39m[90m 55 |[39m     [33mGoogleSearchProvider[39m[33m:[39m [33mMockGoogleSearchProvider[39m
+     [90m    |[39m                           [31m[1m^[22m[39m
+     [90m 56 |[39m   }[33m;[39m
+     [90m 57 |[39m })[33m;[39m
+     [90m 58 |[39m[0m
+
+      at test/unit/search/search-service.test.ts:55:27
+      at Object.require (src/search/search-service.ts:2:1)
+      at Object.<anonymous> (test/unit/search/search-service.test.ts:4:1)
+
+PASS ../test/unit/utils/error-handler.test.ts (33.823 s)
+FAIL ../test/unit/processors/integration/content-integrator.test.ts (34.375 s)
+  ● ContentIntegrator › should apply chunking correctly
+
+    expect(received).toBeGreaterThan(expected)
+
+    Expected: > 2
+    Received:   2
+
+    [0m [90m 103 |[39m
+     [90m 104 |[39m     [90m// チャンキングにより複数のセクションに分割されるはず[39m
+    [31m[1m>[22m[39m[90m 105 |[39m     expect(result[33m.[39mcontentSections[33m.[39mlength)[33m.[39mtoBeGreaterThan([35m2[39m)[33m;[39m
+     [90m     |[39m                                           [31m[1m^[22m[39m
+     [90m 106 |[39m     expect(result[33m.[39mcontentSections[[35m0[39m][33m.[39mtitle)[33m.[39mtoContain([32m'Part 1'[39m)[33m;[39m
+     [90m 107 |[39m   })[33m;[39m
+     [90m 108 |[39m[0m
+
+      at Object.<anonymous> (test/unit/processors/integration/content-integrator.test.ts:105:43)
+
+FAIL ../test/integration/flows/information-flow.test.ts
+  ● Test suite failed to run
+
+    [96m../test/mocks/config.ts[0m:[93m33[0m:[93m5[0m - [91merror[0m[90m TS2353: [0mObject literal may only specify known properties, and 'defaultEngine' does not exist in type '{ maxResults: number; defaultDepth: number; userAgent: string; rateLimit: { requestsPerMinute: number; parallelRequests: number; }; }'.
+
+    [7m33[0m     defaultEngine: 'test-engine',
+    [7m  [0m [91m    ~~~~~~~~~~~~~[0m
+
+      [96m../src/config/config-schema.ts[0m:[93m68[0m:[93m3[0m
+        [7m68[0m   search: searchSchema,
+        [7m  [0m [96m  ~~~~~~~~~~~~~~~~~~~~[0m
+        The expected type comes from property 'search' which is declared here on type '{ general: { workspace: string; cacheDir: string; reportDir: string; maxConcurrentTasks: number; }; models: { default: string; available: { name: string; provider: ModelProvider; apiKeyEnv: string; maxTokens: number; temperature: number; }[]; }; search: { ...; }; logging: { ...; }; }'
+
+PASS ../test/unit/processors/pdf/pdf-processor.test.ts (34.509 s)
+  ● Console
+
+    console.error
+      PDFの処理中にエラーが発生しました: Error: PDF処理エラー
+          at C:\Users\yamaz\Dropbox\work\git\collecting-info-agent\test\unit\processors\pdf\pdf-processor.test.ts:91:15
+          at C:\Users\yamaz\Dropbox\work\git\collecting-info-agent\node_modules\jest-mock\build\index.js:397:39
+          at C:\Users\yamaz\Dropbox\work\git\collecting-info-agent\node_modules\jest-mock\build\index.js:404:13
+          at mockConstructor (C:\Users\yamaz\Dropbox\work\git\collecting-info-agent\node_modules\jest-mock\build\index.js:148:19)
+          at PdfProcessor.process (C:\Users\yamaz\Dropbox\work\git\collecting-info-agent\src\processors\pdf\pdf-processor.ts:69:39)
+          at Object.<anonymous> (C:\Users\yamaz\Dropbox\work\git\collecting-info-agent\test\unit\processors\pdf\pdf-processor.test.ts:97:38)
+          at Promise.then.completed (C:\Users\yamaz\Dropbox\work\git\collecting-info-agent\node_modules\jest-circus\build\utils.js:298:28)
+          at new Promise (<anonymous>)
+          at callAsyncCircusFn (C:\Users\yamaz\Dropbox\work\git\collecting-info-agent\node_modules\jest-circus\build\utils.js:231:10)
+          at _callCircusTest (C:\Users\yamaz\Dropbox\work\git\collecting-info-agent\node_modules\jest-circus\build\run.js:316:40)
+          at processTicksAndRejections (node:internal/process/task_queues:105:5)
+          at _runTest (C:\Users\yamaz\Dropbox\work\git\collecting-info-agent\node_modules\jest-circus\build\run.js:252:3)
+          at _runTestsForDescribeBlock (C:\Users\yamaz\Dropbox\work\git\collecting-info-agent\node_modules\jest-circus\build\run.js:126:9)
+          at _runTestsForDescribeBlock (C:\Users\yamaz\Dropbox\work\git\collecting-info-agent\node_modules\jest-circus\build\run.js:121:9)
+          at _runTestsForDescribeBlock (C:\Users\yamaz\Dropbox\work\git\collecting-info-agent\node_modules\jest-circus\build\run.js:121:9)
+          at run (C:\Users\yamaz\Dropbox\work\git\collecting-info-agent\node_modules\jest-circus\build\run.js:71:3)
+          at runAndTransformResultsToJestFormat (C:\Users\yamaz\Dropbox\work\git\collecting-info-agent\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapterInit.js:122:21)
+          at jestAdapter (C:\Users\yamaz\Dropbox\work\git\collecting-info-agent\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapter.js:79:19)
+          at runTestInternal (C:\Users\yamaz\Dropbox\work\git\collecting-info-agent\node_modules\jest-runner\build\runTest.js:367:16)
+          at runTest (C:\Users\yamaz\Dropbox\work\git\collecting-info-agent\node_modules\jest-runner\build\runTest.js:444:34)
+          at Object.worker (C:\Users\yamaz\Dropbox\work\git\collecting-info-agent\node_modules\jest-runner\build\testWorker.js:106:12)
+
+    [0m [90m 88 |[39m       }
+     [90m 89 |[39m     } [36mcatch[39m (error) {
+    [31m[1m>[22m[39m[90m 90 |[39m       console[33m.[39merror([32m'PDFの処理中にエラーが発生しました:'[39m[33m,[39m error)[33m;[39m
+     [90m    |[39m               [31m[1m^[22m[39m
+     [90m 91 |[39m       [90m// エラーが発生した場合、元のコンテンツをそのまま返す[39m
+     [90m 92 |[39m       [36mif[39m (options[33m.[39mcleanContent [33m!==[39m [36mfalse[39m) {
+     [90m 93 |[39m         result[33m.[39mcleanedContent [33m=[39m content[33m;[39m[0m
+
+      at PdfProcessor.error [as process] (src/processors/pdf/pdf-processor.ts:90:15)
+      at Object.<anonymous> (test/unit/processors/pdf/pdf-processor.test.ts:97:38)
+
+FAIL ../test/unit/agents/main-agent.test.ts
+  ● Test suite failed to run
+
+    [96m../test/mocks/config.ts[0m:[93m33[0m:[93m5[0m - [91merror[0m[90m TS2353: [0mObject literal may only specify known properties, and 'defaultEngine' does not exist in type '{ maxResults: number; defaultDepth: number; userAgent: string; rateLimit: { requestsPerMinute: number; parallelRequests: number; }; }'.
+
+    [7m33[0m     defaultEngine: 'test-engine',
+    [7m  [0m [91m    ~~~~~~~~~~~~~[0m
+
+      [96m../src/config/config-schema.ts[0m:[93m68[0m:[93m3[0m
+        [7m68[0m   search: searchSchema,
+        [7m  [0m [96m  ~~~~~~~~~~~~~~~~~~~~[0m
+        The expected type comes from property 'search' which is declared here on type '{ general: { workspace: string; cacheDir: string; reportDir: string; maxConcurrentTasks: number; }; models: { default: string; available: { name: string; provider: ModelProvider; apiKeyEnv: string; maxTokens: number; temperature: number; }[]; }; search: { ...; }; logging: { ...; }; }'
+
+PASS ../test/unit/search/google-search.test.ts (35.853 s)
+  ● Console
+
+    console.error
+      Google search error: Error: API Error
+          at Object.<anonymous> (C:\Users\yamaz\Dropbox\work\git\collecting-info-agent\test\unit\search\google-search.test.ts:71:48)
+          at Promise.then.completed (C:\Users\yamaz\Dropbox\work\git\collecting-info-agent\node_modules\jest-circus\build\utils.js:298:28)
+          at new Promise (<anonymous>)
+          at callAsyncCircusFn (C:\Users\yamaz\Dropbox\work\git\collecting-info-agent\node_modules\jest-circus\build\utils.js:231:10)
+          at _callCircusTest (C:\Users\yamaz\Dropbox\work\git\collecting-info-agent\node_modules\jest-circus\build\run.js:316:40)
+          at processTicksAndRejections (node:internal/process/task_queues:105:5)
+          at _runTest (C:\Users\yamaz\Dropbox\work\git\collecting-info-agent\node_modules\jest-circus\build\run.js:252:3)
+          at _runTestsForDescribeBlock (C:\Users\yamaz\Dropbox\work\git\collecting-info-agent\node_modules\jest-circus\build\run.js:126:9)
+          at _runTestsForDescribeBlock (C:\Users\yamaz\Dropbox\work\git\collecting-info-agent\node_modules\jest-circus\build\run.js:121:9)
+          at run (C:\Users\yamaz\Dropbox\work\git\collecting-info-agent\node_modules\jest-circus\build\run.js:71:3)
+          at runAndTransformResultsToJestFormat (C:\Users\yamaz\Dropbox\work\git\collecting-info-agent\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapterInit.js:122:21)
+          at jestAdapter (C:\Users\yamaz\Dropbox\work\git\collecting-info-agent\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapter.js:79:19)
+          at runTestInternal (C:\Users\yamaz\Dropbox\work\git\collecting-info-agent\node_modules\jest-runner\build\runTest.js:367:16)
+          at runTest (C:\Users\yamaz\Dropbox\work\git\collecting-info-agent\node_modules\jest-runner\build\runTest.js:444:34)
+          at Object.worker (C:\Users\yamaz\Dropbox\work\git\collecting-info-agent\node_modules\jest-runner\build\testWorker.js:106:12)
+
+    [0m [90m 40 |[39m       [36mreturn[39m [36mthis[39m[33m.[39mparseResults(response[33m.[39mdata)[33m;[39m
+     [90m 41 |[39m     } [36mcatch[39m (error[33m:[39m any) {
+    [31m[1m>[22m[39m[90m 42 |[39m       console[33m.[39merror([32m'Google search error:'[39m[33m,[39m error)[33m;[39m
+     [90m    |[39m               [31m[1m^[22m[39m
+     [90m 43 |[39m       [36mthrow[39m [36mnew[39m [33mError[39m([32m`Google search failed: ${error.message}`[39m)[33m;[39m
+     [90m 44 |[39m     }
+     [90m 45 |[39m   }[0m
+
+      at GoogleSearchProvider.error [as search] (src/search/providers/google-search.ts:42:15)
+      at Object.<anonymous> (test/unit/search/google-search.test.ts:73:5)
+
+FAIL ../test/unit/search/providers/bing-search.test.ts (35.889 s)
+  ● BingSearchProvider › should throw error when no API keys are set
+
+    expect(received).toThrow(expected)
+
+    Expected substring: "Neither Bing Search API key nor Rapid API key is set"
+    Received message:   "Bing Search APIは廃止されたため、このプロバイダーは使用できなくなりました。"
+
+        [0m [90m  7 |[39m [36mexport[39m [36mclass[39m [33mBingSearchProvider[39m [36mimplements[39m [33mISearchProvider[39m {
+         [90m  8 |[39m   constructor() {
+        [31m[1m>[22m[39m[90m  9 |[39m     [36mthrow[39m [36mnew[39m [33mError[39m([32m'Bing Search APIは廃止されたため、このプロバイダーは使用できなくなりました。'[39m)[33m;[39m
+         [90m    |[39m           [31m[1m^[22m[39m
+         [90m 10 |[39m   }
+         [90m 11 |[39m   
+         [90m 12 |[39m   getName()[33m:[39m string {[0m
+
+      at new BingSearchProvider (src/search/providers/bing-search.ts:9:11)
+      at test/unit/search/providers/bing-search.test.ts:42:7
+      at Object.<anonymous> (node_modules/expect/build/toThrowMatchers.js:74:11)
+      at Object.throwingMatcher [as toThrow] (node_modules/expect/build/index.js:320:21)
+      at Object.<anonymous> (test/unit/search/providers/bing-search.test.ts:43:8)
+      at Object.<anonymous> (test/unit/search/providers/bing-search.test.ts:43:8)
+
+  ● BingSearchProvider › should initialize with Bing API key
+
+    Bing Search APIは廃止されたため、このプロバイダーは使用できなくなりました。
+
+    [0m [90m  7 |[39m [36mexport[39m [36mclass[39m [33mBingSearchProvider[39m [36mimplements[39m [33mISearchProvider[39m {
+     [90m  8 |[39m   constructor() {
+    [31m[1m>[22m[39m[90m  9 |[39m     [36mthrow[39m [36mnew[39m [33mError[39m([32m'Bing Search APIは廃止されたため、このプロバイダーは使用できなくなりました。'[39m)[33m;[39m
+     [90m    |[39m           [31m[1m^[22m[39m
+     [90m 10 |[39m   }
+     [90m 11 |[39m   
+     [90m 12 |[39m   getName()[33m:[39m string {[0m
+
+      at new BingSearchProvider (src/search/providers/bing-search.ts:9:11)
+      at Object.<anonymous> (test/unit/search/providers/bing-search.test.ts:52:22)
+
+  ● BingSearchProvider › should initialize with Rapid API key
+
+    Bing Search APIは廃止されたため、このプロバイダーは使用できなくなりました。
+
+    [0m [90m  7 |[39m [36mexport[39m [36mclass[39m [33mBingSearchProvider[39m [36mimplements[39m [33mISearchProvider[39m {
+     [90m  8 |[39m   constructor() {
+    [31m[1m>[22m[39m[90m  9 |[39m     [36mthrow[39m [36mnew[39m [33mError[39m([32m'Bing Search APIは廃止されたため、このプロバイダーは使用できなくなりました。'[39m)[33m;[39m
+     [90m    |[39m           [31m[1m^[22m[39m
+     [90m 10 |[39m   }
+     [90m 11 |[39m   
+     [90m 12 |[39m   getName()[33m:[39m string {[0m
+
+      at new BingSearchProvider (src/search/providers/bing-search.ts:9:11)
+      at Object.<anonymous> (test/unit/search/providers/bing-search.test.ts:63:22)
+
+  ● BingSearchProvider › should search via Bing API
+
+    Bing Search APIは廃止されたため、このプロバイダーは使用できなくなりました。
+
+    [0m [90m  7 |[39m [36mexport[39m [36mclass[39m [33mBingSearchProvider[39m [36mimplements[39m [33mISearchProvider[39m {
+     [90m  8 |[39m   constructor() {
+    [31m[1m>[22m[39m[90m  9 |[39m     [36mthrow[39m [36mnew[39m [33mError[39m([32m'Bing Search APIは廃止されたため、このプロバイダーは使用できなくなりました。'[39m)[33m;[39m
+     [90m    |[39m           [31m[1m^[22m[39m
+     [90m 10 |[39m   }
+     [90m 11 |[39m   
+     [90m 12 |[39m   getName()[33m:[39m string {[0m
+
+      at new BingSearchProvider (src/search/providers/bing-search.ts:9:11)
+      at Object.<anonymous> (test/unit/search/providers/bing-search.test.ts:97:22)
+
+  ● BingSearchProvider › should search via Rapid API
+
+    Bing Search APIは廃止されたため、このプロバイダーは使用できなくなりました。
+
+    [0m [90m  7 |[39m [36mexport[39m [36mclass[39m [33mBingSearchProvider[39m [36mimplements[39m [33mISearchProvider[39m {
+     [90m  8 |[39m   constructor() {
+    [31m[1m>[22m[39m[90m  9 |[39m     [36mthrow[39m [36mnew[39m [33mError[39m([32m'Bing Search APIは廃止されたため、このプロバイダーは使用できなくなりました。'[39m)[33m;[39m
+     [90m    |[39m           [31m[1m^[22m[39m
+     [90m 10 |[39m   }
+     [90m 11 |[39m   
+     [90m 12 |[39m   getName()[33m:[39m string {[0m
+
+      at new BingSearchProvider (src/search/providers/bing-search.ts:9:11)
+      at Object.<anonymous> (test/unit/search/providers/bing-search.test.ts:149:22)
+
+  ● BingSearchProvider › should handle empty search results
+
+    Bing Search APIは廃止されたため、このプロバイダーは使用できなくなりました。
+
+    [0m [90m  7 |[39m [36mexport[39m [36mclass[39m [33mBingSearchProvider[39m [36mimplements[39m [33mISearchProvider[39m {
+     [90m  8 |[39m   constructor() {
+    [31m[1m>[22m[39m[90m  9 |[39m     [36mthrow[39m [36mnew[39m [33mError[39m([32m'Bing Search APIは廃止されたため、このプロバイダーは使用できなくなりました。'[39m)[33m;[39m
+     [90m    |[39m           [31m[1m^[22m[39m
+     [90m 10 |[39m   }
+     [90m 11 |[39m   
+     [90m 12 |[39m   getName()[33m:[39m string {[0m
+
+      at new BingSearchProvider (src/search/providers/bing-search.ts:9:11)
+      at Object.<anonymous> (test/unit/search/providers/bing-search.test.ts:184:22)
+
+  ● BingSearchProvider › should handle search errors
+
+    Bing Search APIは廃止されたため、このプロバイダーは使用できなくなりました。
+
+    [0m [90m  7 |[39m [36mexport[39m [36mclass[39m [33mBingSearchProvider[39m [36mimplements[39m [33mISearchProvider[39m {
+     [90m  8 |[39m   constructor() {
+    [31m[1m>[22m[39m[90m  9 |[39m     [36mthrow[39m [36mnew[39m [33mError[39m([32m'Bing Search APIは廃止されたため、このプロバイダーは使用できなくなりました。'[39m)[33m;[39m
+     [90m    |[39m           [31m[1m^[22m[39m
+     [90m 10 |[39m   }
+     [90m 11 |[39m   
+     [90m 12 |[39m   getName()[33m:[39m string {[0m
+
+      at new BingSearchProvider (src/search/providers/bing-search.ts:9:11)
+      at Object.<anonymous> (test/unit/search/providers/bing-search.test.ts:198:22)
+
+PASS ../test/unit/config/env-manager.test.ts (37.593 s)
+  ● Console
+
+    console.log
+      2025-03-09T13:10:37.116Z [WARN] .envファイルが見つからないか読み込めません。環境変数を直接使用します。
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+(node:34440) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+FAIL ../test/unit/models/google-model.test.ts (41.929 s)
+  ● Console
+
+    console.log
+      2025-03-09T13:10:41.437Z [WARN] Google AI APIキーが設定されていません (環境変数: GOOGLE_API_KEY)
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      2025-03-09T13:10:41.451Z [WARN] Google AI APIキーが設定されていません (環境変数: GOOGLE_API_KEY)
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      2025-03-09T13:10:41.465Z [WARN] Google AI APIキーが設定されていません (環境変数: GOOGLE_API_KEY)
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      2025-03-09T13:10:41.465Z [WARN] Google AI APIキーが設定されていません (環境変数: GOOGLE_API_KEY)
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      2025-03-09T13:10:41.466Z [WARN] Google AI APIキーが設定されていません (環境変数: GOOGLE_API_KEY)
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      2025-03-09T13:10:41.467Z [WARN] Google AI APIキーが設定されていません (環境変数: GOOGLE_API_KEY)
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      2025-03-09T13:10:41.468Z [WARN] Google AI APIキーが設定されていません (環境変数: GOOGLE_API_KEY)
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      2025-03-09T13:10:41.469Z [WARN] Google AI APIキーが設定されていません (環境変数: GOOGLE_API_KEY)
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      2025-03-09T13:10:41.470Z [WARN] Google AI APIキーが設定されていません (環境変数: GOOGLE_API_KEY)
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      2025-03-09T13:10:41.484Z [WARN] Google AI APIキーが設定されていません (環境変数: GOOGLE_API_KEY)
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      ⚠️ Google APIキーが設定されていないため、このテストをスキップします
+
+      at Object.<anonymous> (test/unit/models/google-model.test.ts:66:17)
+
+    console.log
+      2025-03-09T13:10:41.486Z [WARN] Google AI APIキーが設定されていません (環境変数: GOOGLE_API_KEY)
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      ⚠️ Google APIキーが設定されていないため、このテストをスキップします
+
+      at Object.<anonymous> (test/unit/models/google-model.test.ts:94:17)
+
+  ● GoogleModel › isConfigured › APIキーが設定されている場合はtrueを返す
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+    [0m [90m 34 |[39m     test([32m'APIキーが設定されている場合はtrueを返す'[39m[33m,[39m () [33m=>[39m {
+     [90m 35 |[39m       process[33m.[39menv[apiKeyEnv] [33m=[39m [32m'test-api-key'[39m[33m;[39m
+    [31m[1m>[22m[39m[90m 36 |[39m       expect(model[33m.[39misConfigured())[33m.[39mtoBe([36mtrue[39m)[33m;[39m
+     [90m    |[39m                                    [31m[1m^[22m[39m
+     [90m 37 |[39m     })[33m;[39m
+     [90m 38 |[39m   })[33m;[39m
+     [90m 39 |[39m[0m
+
+      at Object.<anonymous> (test/unit/models/google-model.test.ts:36:36)
+
+FAIL ../test/unit/models/anthropic-model.test.ts (41.925 s)
+  ● Console
+
+    console.log
+      2025-03-09T13:10:41.432Z [WARN] Anthropic APIキーが設定されていません (環境変数: ANTHROPIC_API_KEY)
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      2025-03-09T13:10:41.447Z [WARN] Anthropic APIキーが設定されていません (環境変数: ANTHROPIC_API_KEY)
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      2025-03-09T13:10:41.460Z [WARN] Anthropic APIキーが設定されていません (環境変数: ANTHROPIC_API_KEY)
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      2025-03-09T13:10:41.461Z [WARN] Anthropic APIキーが設定されていません (環境変数: ANTHROPIC_API_KEY)
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      2025-03-09T13:10:41.462Z [WARN] Anthropic APIキーが設定されていません (環境変数: ANTHROPIC_API_KEY)
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      2025-03-09T13:10:41.463Z [WARN] Anthropic APIキーが設定されていません (環境変数: ANTHROPIC_API_KEY)
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      2025-03-09T13:10:41.464Z [WARN] Anthropic APIキーが設定されていません (環境変数: ANTHROPIC_API_KEY)
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      2025-03-09T13:10:41.465Z [WARN] Anthropic APIキーが設定されていません (環境変数: ANTHROPIC_API_KEY)
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      2025-03-09T13:10:41.466Z [WARN] Anthropic APIキーが設定されていません (環境変数: ANTHROPIC_API_KEY)
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      2025-03-09T13:10:41.467Z [WARN] Anthropic APIキーが設定されていません (環境変数: ANTHROPIC_API_KEY)
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      2025-03-09T13:10:41.468Z [WARN] Anthropic APIキーが設定されていません (環境変数: ANTHROPIC_API_KEY)
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      2025-03-09T13:10:41.484Z [WARN] Anthropic APIキーが設定されていません (環境変数: ANTHROPIC_API_KEY)
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      ⚠️ Anthropic APIキーが設定されていないため、このテストをスキップします
+
+      at Object.<anonymous> (test/unit/models/anthropic-model.test.ts:71:17)
+
+    console.log
+      2025-03-09T13:10:41.486Z [WARN] Anthropic APIキーが設定されていません (環境変数: ANTHROPIC_API_KEY)
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      ⚠️ Anthropic APIキーが設定されていないため、このテストをスキップします
+
+      at Object.<anonymous> (test/unit/models/anthropic-model.test.ts:99:17)
+
+  ● AnthropicModel › isConfigured › APIキーが設定されている場合はtrueを返す
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+    [0m [90m 34 |[39m     test([32m'APIキーが設定されている場合はtrueを返す'[39m[33m,[39m () [33m=>[39m {
+     [90m 35 |[39m       process[33m.[39menv[apiKeyEnv] [33m=[39m [32m'test-api-key'[39m[33m;[39m
+    [31m[1m>[22m[39m[90m 36 |[39m       expect(model[33m.[39misConfigured())[33m.[39mtoBe([36mtrue[39m)[33m;[39m
+     [90m    |[39m                                    [31m[1m^[22m[39m
+     [90m 37 |[39m     })[33m;[39m
+     [90m 38 |[39m   })[33m;[39m
+     [90m 39 |[39m[0m
+
+      at Object.<anonymous> (test/unit/models/anthropic-model.test.ts:36:36)
+
+(node:2780) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+PASS ../test/unit/models/model-selector.test.ts (42.818 s)
+  ● Console
+
+    console.log
+      2025-03-09T13:10:42.350Z [WARN] モデル non-existent-model が見つかりません。デフォルトモデルを使用します。
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+(node:27672) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+FAIL ../test/unit/models/openai-model.test.ts (42.837 s)
+  ● Console
+
+    console.log
+      2025-03-09T13:10:42.330Z [WARN] OpenAI APIキーが設定されていません (環境変数: OPENAI_API_KEY)
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      2025-03-09T13:10:42.342Z [WARN] OpenAI APIキーが設定されていません (環境変数: OPENAI_API_KEY)
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      2025-03-09T13:10:42.372Z [WARN] OpenAI APIキーが設定されていません (環境変数: OPENAI_API_KEY)
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      2025-03-09T13:10:42.373Z [WARN] OpenAI APIキーが設定されていません (環境変数: OPENAI_API_KEY)
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      2025-03-09T13:10:42.374Z [WARN] OpenAI APIキーが設定されていません (環境変数: OPENAI_API_KEY)
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      2025-03-09T13:10:42.375Z [WARN] OpenAI APIキーが設定されていません (環境変数: OPENAI_API_KEY)
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      2025-03-09T13:10:42.378Z [WARN] OpenAI APIキーが設定されていません (環境変数: OPENAI_API_KEY)
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      2025-03-09T13:10:42.379Z [WARN] OpenAI APIキーが設定されていません (環境変数: OPENAI_API_KEY)
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      2025-03-09T13:10:42.384Z [WARN] OpenAI APIキーが設定されていません (環境変数: OPENAI_API_KEY)
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      2025-03-09T13:10:42.395Z [WARN] OpenAI APIキーが設定されていません (環境変数: OPENAI_API_KEY)
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      ⚠️ OpenAI APIキーが設定されていないため、このテストをスキップします
+
+      at Object.<anonymous> (test/unit/models/openai-model.test.ts:66:17)
+
+    console.log
+      2025-03-09T13:10:42.397Z [WARN] OpenAI APIキーが設定されていません (環境変数: OPENAI_API_KEY)
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      ⚠️ OpenAI APIキーが設定されていないため、このテストをスキップします
+
+      at Object.<anonymous> (test/unit/models/openai-model.test.ts:94:17)
+
+  ● OpenAIModel › isConfigured › APIキーが設定されている場合はtrueを返す
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+    [0m [90m 34 |[39m     test([32m'APIキーが設定されている場合はtrueを返す'[39m[33m,[39m () [33m=>[39m {
+     [90m 35 |[39m       process[33m.[39menv[apiKeyEnv] [33m=[39m [32m'test-api-key'[39m[33m;[39m
+    [31m[1m>[22m[39m[90m 36 |[39m       expect(model[33m.[39misConfigured())[33m.[39mtoBe([36mtrue[39m)[33m;[39m
+     [90m    |[39m                                    [31m[1m^[22m[39m
+     [90m 37 |[39m     })[33m;[39m
+     [90m 38 |[39m   })[33m;[39m
+     [90m 39 |[39m[0m
+
+      at Object.<anonymous> (test/unit/models/openai-model.test.ts:36:36)
+
+  ● OpenAIModel › モデル名の自動修正 › モデル名が短縮形の場合は正式名に修正
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "gpt-4"
+    Received: "gpt4"
+
+    [0m [90m 46 |[39m     test([32m'モデル名が短縮形の場合は正式名に修正'[39m[33m,[39m () [33m=>[39m {
+     [90m 47 |[39m       [36mconst[39m model [33m=[39m [36mnew[39m [33mOpenAIModel[39m([32m'gpt4'[39m[33m,[39m apiKeyEnv)[33m;[39m
+    [31m[1m>[22m[39m[90m 48 |[39m       expect(model[33m.[39mid)[33m.[39mtoBe([32m'gpt-4'[39m)[33m;[39m
+     [90m    |[39m                        [31m[1m^[22m[39m
+     [90m 49 |[39m     })[33m;[39m
+     [90m 50 |[39m
+     [90m 51 |[39m     test([32m'モデル名にturboが含まれる場合は正式名に修正'[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (test/unit/models/openai-model.test.ts:48:24)
+
+  ● OpenAIModel › モデル名の自動修正 › モデル名にturboが含まれる場合は正式名に修正
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "gpt-4-turbo"
+    Received: "gpt4-turbo"
+
+    [0m [90m 51 |[39m     test([32m'モデル名にturboが含まれる場合は正式名に修正'[39m[33m,[39m () [33m=>[39m {
+     [90m 52 |[39m       [36mconst[39m model [33m=[39m [36mnew[39m [33mOpenAIModel[39m([32m'gpt4-turbo'[39m[33m,[39m apiKeyEnv)[33m;[39m
+    [31m[1m>[22m[39m[90m 53 |[39m       expect(model[33m.[39mid)[33m.[39mtoBe([32m'gpt-4-turbo'[39m)[33m;[39m
+     [90m    |[39m                        [31m[1m^[22m[39m
+     [90m 54 |[39m     })[33m;[39m
+     [90m 55 |[39m   })[33m;[39m
+     [90m 56 |[39m[0m
+
+      at Object.<anonymous> (test/unit/models/openai-model.test.ts:53:24)
+
+(node:6248) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+PASS ../test/unit/models/model-env.test.ts (42.889 s)
+  ● Console
+
+    console.log
+      2025-03-09T13:10:42.420Z [WARN] OpenAI APIキーが設定されていません (環境変数: OPENAI_API_KEY)
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      2025-03-09T13:10:42.449Z [WARN] Anthropic APIキーが設定されていません (環境変数: ANTHROPIC_API_KEY)
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      2025-03-09T13:10:42.457Z [WARN] Google AI APIキーが設定されていません (環境変数: GOOGLE_API_KEY)
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+Failed to collect coverage from C:\Users\yamaz\Dropbox\work\git\collecting-info-agent\src\processors\html\html-processor.ts
+ERROR: [96m../src/processors/html/html-processor.ts[0m:[93m5[0m:[93m24[0m - [91merror[0m[90m TS2307: [0mCannot find module '../utils/logger' or its corresponding type declarations.
+
+[7m5[0m import { logger } from '../utils/logger';
+[7m [0m [91m                       ~~~~~~~~~~~~~~~~~[0m
+[96m../src/processors/html/html-processor.ts[0m:[93m6[0m:[93m37[0m - [91merror[0m[90m TS2307: [0mCannot find module '../errors/app-error' or its corresponding type declarations.
+
+[7m6[0m import { AppError, ErrorCode } from '../errors/app-error';
+[7m [0m [91m                                    ~~~~~~~~~~~~~~~~~~~~~[0m
+STACK: 
+Failed to collect coverage from C:\Users\yamaz\Dropbox\work\git\collecting-info-agent\src\test-error-handling.ts
+ERROR: [96m../src/test-error-handling.ts[0m:[93m80[0m:[93m3[0m - [91merror[0m[90m TS2322: [0mType '() => Promise<{ url: string; title: string; snippet: string; relevanceScore: number; }[]>' is not assignable to type '{ (query: string, options?: SearchOptions | undefined): Promise<SearchResult[]>; (query: string, providerName?: string | undefined, options?: SearchOptions | undefined): Promise<...>; }'.
+  Type 'Promise<{ url: string; title: string; snippet: string; relevanceScore: number; }[]>' is not assignable to type 'Promise<SearchResult[]>'.
+    Type '{ url: string; title: string; snippet: string; relevanceScore: number; }[]' is not assignable to type 'SearchResult[]'.
+      Property 'source' is missing in type '{ url: string; title: string; snippet: string; relevanceScore: number; }' but required in type 'SearchResult'.
+
+[7m80[0m   searchService.search = async () => {
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~~~[0m
+
+  [96m../src/search/interfaces/search-provider.ts[0m:[93m18[0m:[93m3[0m
+    [7m18[0m   source: string;
+    [7m  [0m [96m  ~~~~~~[0m
+    'source' is declared here.
+[96m../src/test-error-handling.ts[0m:[93m121[0m:[93m3[0m - [91merror[0m[90m TS2322: [0mType '() => Promise<{ url: string; title: string; snippet: string; relevanceScore: number; }[]>' is not assignable to type '{ (query: string, options?: SearchOptions | undefined): Promise<SearchResult[]>; (query: string, providerName?: string | undefined, options?: SearchOptions | undefined): Promise<...>; }'.
+  Type 'Promise<{ url: string; title: string; snippet: string; relevanceScore: number; }[]>' is not assignable to type 'Promise<SearchResult[]>'.
+    Type '{ url: string; title: string; snippet: string; relevanceScore: number; }[]' is not assignable to type 'SearchResult[]'.
+      Property 'source' is missing in type '{ url: string; title: string; snippet: string; relevanceScore: number; }' but required in type 'SearchResult'.
+
+[7m121[0m   searchService.search = async () => {
+[7m   [0m [91m  ~~~~~~~~~~~~~~~~~~~~[0m
+
+  [96m../src/search/interfaces/search-provider.ts[0m:[93m18[0m:[93m3[0m
+    [7m18[0m   source: string;
+    [7m  [0m [96m  ~~~~~~[0m
+    'source' is declared here.
+STACK: 
+-------------------------------|---------|----------|---------|---------|-----------------------------------------------------------
+File                           | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s                                         
+-------------------------------|---------|----------|---------|---------|-----------------------------------------------------------
+All files                      |   22.33 |    18.64 |   31.66 |   22.56 |                                                           
+ src                           |       0 |        0 |       0 |       0 |                                                           
+  index.ts                     |       0 |        0 |       0 |       0 | 1-126                                                     
+  test-advanced-rag.ts         |       0 |        0 |       0 |       0 | 5-84                                                      
+  test-agent-integration.ts    |       0 |        0 |       0 |       0 | 5-108                                                     
+  test-config.ts               |       0 |        0 |       0 |       0 | 4-71                                                      
+  test-rag.ts                  |       0 |        0 |       0 |       0 | 4-48                                                      
+  test-search-only.ts          |       0 |        0 |       0 |       0 | 4-63                                                      
+  test-simple-rag.ts           |       0 |        0 |       0 |       0 | 5-81                                                      
+  test-simple-url.ts           |       0 |        0 |       0 |       0 | 4-89                                                      
+  test-url-content.ts          |       0 |        0 |       0 |       0 | 4-57                                                      
+  test-url.ts                  |       0 |        0 |       0 |       0 | 4-48                                                      
+ src/agents                    |       0 |        0 |       0 |       0 |                                                           
+  info-processor.ts            |       0 |        0 |       0 |       0 | 1-314                                                     
+  main-agent.ts                |       0 |        0 |       0 |       0 | 1-315                                                     
+  search-agent.ts              |       0 |        0 |       0 |       0 | 5-321                                                     
+ src/config                    |   31.49 |    24.52 |   54.54 |   31.49 |                                                           
+  config-loader.ts             |       0 |        0 |       0 |       0 | 1-224                                                     
+  config-schema.ts             |       0 |      100 |     100 |       0 | 1-77                                                      
+  env-manager.ts               |   76.92 |     61.9 |      80 |   76.92 | 35,43,52,85,108,124,152-161,178,189,201                   
+ src/models                    |   58.49 |     37.5 |   77.77 |   58.49 |                                                           
+  selector.ts                  |   58.49 |     37.5 |   77.77 |   58.49 | 37-71,106,148                                             
+ src/models/interfaces         |   24.52 |     4.54 |      30 |      25 |                                                           
+  base-model.ts                |   24.52 |     4.54 |      30 |      25 | 74-169                                                    
+ src/models/providers          |   19.59 |     6.25 |   47.82 |   20.12 |                                                           
+  anthropic-model.ts           |   18.46 |     6.38 |   44.44 |   19.51 | 70-134,144-356                                            
+  google-model.ts              |      21 |     6.38 |   44.44 |   21.36 | 57-88,114-115,125-337                                     
+  openai-model.ts              |   19.35 |     5.55 |      60 |   19.35 | 41-42,52-239                                              
+ src/processors                |       0 |        0 |       0 |       0 |                                                           
+  content-processor-service.ts |       0 |        0 |       0 |       0 | 2-209                                                     
+ src/processors/ai             |    52.5 |    52.38 |      80 |    52.5 |                                                           
+  summarizer.ts                |    52.5 |    52.38 |      80 |    52.5 | 72-75,98-104,144-164                                      
+ src/processors/integration    |   88.04 |    66.66 |     100 |   88.88 |                                                           
+  content-integrator.ts        |   88.04 |    66.66 |     100 |   88.88 | 82,211,222,239,259-269,273,300                            
+ src/processors/pdf            |   70.58 |       60 |     100 |   70.58 |                                                           
+  pdf-processor.ts             |   70.58 |       60 |     100 |   70.58 | 57,66,125-136,160-167,173,179-194,210,268-269,290,309,317 
+ src/processors/rag            |       0 |        0 |       0 |       0 |                                                           
+  multi-stage-rag.ts           |       0 |        0 |       0 |       0 | 6-394                                                     
+ src/processors/relevance      |       0 |        0 |       0 |       0 |                                                           
+  relevance-scorer.ts          |       0 |        0 |       0 |       0 | 3-247                                                     
+ src/search                    |       0 |        0 |       0 |       0 |                                                           
+  rate-limiter.ts              |       0 |        0 |       0 |       0 | 7-67                                                      
+  search-service.ts            |       0 |        0 |       0 |       0 | 2-186                                                     
+ src/search/cache              |       0 |        0 |       0 |       0 |                                                           
+  search-cache.ts              |       0 |        0 |       0 |       0 | 2-141                                                     
+ src/search/providers          |      84 |    66.66 |      75 |   83.33 |                                                           
+  bing-search.ts               |      50 |      100 |   33.33 |      50 | 13-17                                                     
+  google-search.ts             |   90.47 |    66.66 |     100 |      90 | 15,49                                                     
+ src/utils                     |    95.6 |    79.16 |   84.61 |   96.66 |                                                           
+  error-handler.ts             |     100 |      100 |     100 |     100 |                                                           
+  logger.ts                    |   87.87 |    64.28 |   66.66 |   90.62 | 42,101-102                                                
+  types.ts                     |     100 |      100 |     100 |     100 |                                                           
+-------------------------------|---------|----------|---------|---------|-----------------------------------------------------------
+
+Summary of all failing tests
+FAIL test/unit/agents/search-agent.test.ts
+  ● Test suite failed to run
+
+    [96m../test/unit/agents/search-agent.test.ts[0m:[93m155[0m:[93m73[0m - [91merror[0m[90m TS2345: [0mArgument of type '{ title: string; url: string; content: string; snippet: string; score: number; timestamp: string; }[]' is not assignable to parameter of type 'SearchResult[]'.
+      Type '{ title: string; url: string; content: string; snippet: string; score: number; timestamp: string; }' is missing the following properties from type 'SearchResult': source, metadata, content2, relevance
+
+    [7m155[0m       const context = await searchAgent.extractRelevantContext('テスト検索', mockSearchResults);
+    [7m   [0m [91m                                                                        ~~~~~~~~~~~~~~~~~[0m
+    [96m../test/unit/agents/search-agent.test.ts[0m:[93m166[0m:[93m73[0m - [91merror[0m[90m TS2345: [0mArgument of type '{ title: string; url: string; content: string; snippet: string; score: number; timestamp: string; }[]' is not assignable to parameter of type 'SearchResult[]'.
+      Type '{ title: string; url: string; content: string; snippet: string; score: number; timestamp: string; }' is missing the following properties from type 'SearchResult': source, metadata, content2, relevance
+
+    [7m166[0m       const context = await searchAgent.extractRelevantContext('テスト検索', mockSearchResults, maxLength);
+    [7m   [0m [91m                                                                        ~~~~~~~~~~~~~~~~~[0m
+
+FAIL test/unit/processors/html/html-processor.test.ts
+  ● Test suite failed to run
+
+    [96m../src/processors/html/html-processor.ts[0m:[93m5[0m:[93m24[0m - [91merror[0m[90m TS2307: [0mCannot find module '../utils/logger' or its corresponding type declarations.
+
+    [7m5[0m import { logger } from '../utils/logger';
+    [7m [0m [91m                       ~~~~~~~~~~~~~~~~~[0m
+    [96m../src/processors/html/html-processor.ts[0m:[93m6[0m:[93m37[0m - [91merror[0m[90m TS2307: [0mCannot find module '../errors/app-error' or its corresponding type declarations.
+
+    [7m6[0m import { AppError, ErrorCode } from '../errors/app-error';
+    [7m [0m [91m                                    ~~~~~~~~~~~~~~~~~~~~~[0m
+
+FAIL test/unit/search/search-cache.test.ts
+  ● Test suite failed to run
+
+    [96m../test/unit/search/search-cache.test.ts[0m:[93m24[0m:[93m29[0m - [91merror[0m[90m TS2559: [0mType '"/mock/cache/dir"' has no properties in common with type '{ cachePath?: string | undefined; cacheExpiry?: number | undefined; persistCacheInterval?: number | undefined; }'.
+
+    [7m24[0m     cache = new SearchCache(mockCacheDir);
+    [7m  [0m [91m                            ~~~~~~~~~~~~[0m
+
+FAIL test/unit/models/providers/openai-provider.test.ts
+  ● Test suite failed to run
+
+    [96m../test/unit/models/providers/openai-provider.test.ts[0m:[93m1[0m:[93m32[0m - [91merror[0m[90m TS2307: [0mCannot find module '../../../../src/models/providers/openai-provider' or its corresponding type declarations.
+
+    [7m1[0m import { OpenAIProvider } from '../../../../src/models/providers/openai-provider';
+    [7m [0m [91m                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+FAIL test/unit/processors/content-processor-service.test.ts
+  ● Test suite failed to run
+
+    [96m../test/unit/processors/content-processor-service.test.ts[0m:[93m63[0m:[93m36[0m - [91merror[0m[90m TS7006: [0mParameter 'r' implicitly has an 'any' type.
+
+    [7m63[0m         sources: searchResults.map(r => ({ title: r.title, url: r.url })),
+    [7m  [0m [91m                                   ~[0m
+    [96m../test/unit/processors/content-processor-service.test.ts[0m:[93m64[0m:[93m48[0m - [91merror[0m[90m TS7006: [0mParameter 'c' implicitly has an 'any' type.
+
+    [7m64[0m         contentSections: processedContents.map(c => ({
+    [7m  [0m [91m                                               ~[0m
+
+FAIL test/unit/agents/info-processor.test.ts
+  ● Test suite failed to run
+
+    [96m../test/unit/agents/info-processor.test.ts[0m:[93m57[0m:[93m64[0m - [91merror[0m[90m TS2345: [0mArgument of type '{ title: string; url: string; content: string; snippet: string; score: number; timestamp: string; }[]' is not assignable to parameter of type 'SearchResult[]'.
+      Type '{ title: string; url: string; content: string; snippet: string; score: number; timestamp: string; }' is missing the following properties from type 'SearchResult': source, metadata, content2, relevance
+
+    [7m57[0m       const result = await infoProcessor.processResults(query, mockSearchResults);
+    [7m  [0m [91m                                                               ~~~~~~~~~~~~~~~~~[0m
+    [96m../test/unit/agents/info-processor.test.ts[0m:[93m73[0m:[93m51[0m - [91merror[0m[90m TS2345: [0mArgument of type '{ title: string; url: string; content: string; snippet: string; score: number; timestamp: string; }[]' is not assignable to parameter of type 'SearchResult[]'.
+      Type '{ title: string; url: string; content: string; snippet: string; score: number; timestamp: string; }' is missing the following properties from type 'SearchResult': source, metadata, content2, relevance
+
+    [7m73[0m       await infoProcessor.processResults('テスト質問', mockSearchResults, 'test-model');
+    [7m  [0m [91m                                                  ~~~~~~~~~~~~~~~~~[0m
+    [96m../test/unit/agents/info-processor.test.ts[0m:[93m79[0m:[93m51[0m - [91merror[0m[90m TS2345: [0mArgument of type '{ title: string; url: string; content: string; snippet: string; score: number; timestamp: string; }[]' is not assignable to parameter of type 'SearchResult[]'.
+      Type '{ title: string; url: string; content: string; snippet: string; score: number; timestamp: string; }' is missing the following properties from type 'SearchResult': source, metadata, content2, relevance
+
+    [7m79[0m       await infoProcessor.processResults('テスト質問', mockSearchResults, undefined, OutputFormat.HTML);
+    [7m  [0m [91m                                                  ~~~~~~~~~~~~~~~~~[0m
+    [96m../test/unit/agents/info-processor.test.ts[0m:[93m127[0m:[93m67[0m - [91merror[0m[90m TS2345: [0mArgument of type '{ title: string; url: string; content: string; snippet: string; score: number; timestamp: string; }[]' is not assignable to parameter of type 'SearchResult[]'.
+      Type '{ title: string; url: string; content: string; snippet: string; score: number; timestamp: string; }' is missing the following properties from type 'SearchResult': source, metadata, content2, relevance
+
+    [7m127[0m       const result = await infoProcessor.extractKeyFacts('テスト質問', mockSearchResults);
+    [7m   [0m [91m                                                                  ~~~~~~~~~~~~~~~~~[0m
+    [96m../test/unit/agents/info-processor.test.ts[0m:[93m153[0m:[93m67[0m - [91merror[0m[90m TS2345: [0mArgument of type '{ title: string; url: string; content: string; snippet: string; score: number; timestamp: string; }[]' is not assignable to parameter of type 'SearchResult[]'.
+      Type '{ title: string; url: string; content: string; snippet: string; score: number; timestamp: string; }' is missing the following properties from type 'SearchResult': source, metadata, content2, relevance
+
+    [7m153[0m       const result = await infoProcessor.extractKeyFacts('テスト質問', mockSearchResults);
+    [7m   [0m [91m                                                                  ~~~~~~~~~~~~~~~~~[0m
+
+FAIL test/unit/search/search-service.test.ts
+  ● Test suite failed to run
+
+    ReferenceError: Cannot access 'MockGoogleSearchProvider' before initialization
+
+    [0m [90m 53 |[39m jest[33m.[39mmock([32m'../../../src/search/providers/google-search'[39m[33m,[39m () [33m=>[39m {
+     [90m 54 |[39m   [36mreturn[39m {
+    [31m[1m>[22m[39m[90m 55 |[39m     [33mGoogleSearchProvider[39m[33m:[39m [33mMockGoogleSearchProvider[39m
+     [90m    |[39m                           [31m[1m^[22m[39m
+     [90m 56 |[39m   }[33m;[39m
+     [90m 57 |[39m })[33m;[39m
+     [90m 58 |[39m[0m
+
+      at test/unit/search/search-service.test.ts:55:27
+      at Object.require (src/search/search-service.ts:2:1)
+      at Object.<anonymous> (test/unit/search/search-service.test.ts:4:1)
+
+FAIL test/unit/processors/integration/content-integrator.test.ts (34.375 s)
+  ● ContentIntegrator › should apply chunking correctly
+
+    expect(received).toBeGreaterThan(expected)
+
+    Expected: > 2
+    Received:   2
+
+    [0m [90m 103 |[39m
+     [90m 104 |[39m     [90m// チャンキングにより複数のセクションに分割されるはず[39m
+    [31m[1m>[22m[39m[90m 105 |[39m     expect(result[33m.[39mcontentSections[33m.[39mlength)[33m.[39mtoBeGreaterThan([35m2[39m)[33m;[39m
+     [90m     |[39m                                           [31m[1m^[22m[39m
+     [90m 106 |[39m     expect(result[33m.[39mcontentSections[[35m0[39m][33m.[39mtitle)[33m.[39mtoContain([32m'Part 1'[39m)[33m;[39m
+     [90m 107 |[39m   })[33m;[39m
+     [90m 108 |[39m[0m
+
+      at Object.<anonymous> (test/unit/processors/integration/content-integrator.test.ts:105:43)
+
+FAIL test/integration/flows/information-flow.test.ts
+  ● Test suite failed to run
+
+    [96m../test/mocks/config.ts[0m:[93m33[0m:[93m5[0m - [91merror[0m[90m TS2353: [0mObject literal may only specify known properties, and 'defaultEngine' does not exist in type '{ maxResults: number; defaultDepth: number; userAgent: string; rateLimit: { requestsPerMinute: number; parallelRequests: number; }; }'.
+
+    [7m33[0m     defaultEngine: 'test-engine',
+    [7m  [0m [91m    ~~~~~~~~~~~~~[0m
+
+      [96m../src/config/config-schema.ts[0m:[93m68[0m:[93m3[0m
+        [7m68[0m   search: searchSchema,
+        [7m  [0m [96m  ~~~~~~~~~~~~~~~~~~~~[0m
+        The expected type comes from property 'search' which is declared here on type '{ general: { workspace: string; cacheDir: string; reportDir: string; maxConcurrentTasks: number; }; models: { default: string; available: { name: string; provider: ModelProvider; apiKeyEnv: string; maxTokens: number; temperature: number; }[]; }; search: { ...; }; logging: { ...; }; }'
+
+FAIL test/unit/agents/main-agent.test.ts
+  ● Test suite failed to run
+
+    [96m../test/mocks/config.ts[0m:[93m33[0m:[93m5[0m - [91merror[0m[90m TS2353: [0mObject literal may only specify known properties, and 'defaultEngine' does not exist in type '{ maxResults: number; defaultDepth: number; userAgent: string; rateLimit: { requestsPerMinute: number; parallelRequests: number; }; }'.
+
+    [7m33[0m     defaultEngine: 'test-engine',
+    [7m  [0m [91m    ~~~~~~~~~~~~~[0m
+
+      [96m../src/config/config-schema.ts[0m:[93m68[0m:[93m3[0m
+        [7m68[0m   search: searchSchema,
+        [7m  [0m [96m  ~~~~~~~~~~~~~~~~~~~~[0m
+        The expected type comes from property 'search' which is declared here on type '{ general: { workspace: string; cacheDir: string; reportDir: string; maxConcurrentTasks: number; }; models: { default: string; available: { name: string; provider: ModelProvider; apiKeyEnv: string; maxTokens: number; temperature: number; }[]; }; search: { ...; }; logging: { ...; }; }'
+
+FAIL test/unit/search/providers/bing-search.test.ts (35.889 s)
+  ● BingSearchProvider › should throw error when no API keys are set
+
+    expect(received).toThrow(expected)
+
+    Expected substring: "Neither Bing Search API key nor Rapid API key is set"
+    Received message:   "Bing Search APIは廃止されたため、このプロバイダーは使用できなくなりました。"
+
+        [0m [90m  7 |[39m [36mexport[39m [36mclass[39m [33mBingSearchProvider[39m [36mimplements[39m [33mISearchProvider[39m {
+         [90m  8 |[39m   constructor() {
+        [31m[1m>[22m[39m[90m  9 |[39m     [36mthrow[39m [36mnew[39m [33mError[39m([32m'Bing Search APIは廃止されたため、このプロバイダーは使用できなくなりました。'[39m)[33m;[39m
+         [90m    |[39m           [31m[1m^[22m[39m
+         [90m 10 |[39m   }
+         [90m 11 |[39m   
+         [90m 12 |[39m   getName()[33m:[39m string {[0m
+
+      at new BingSearchProvider (src/search/providers/bing-search.ts:9:11)
+      at test/unit/search/providers/bing-search.test.ts:42:7
+      at Object.<anonymous> (node_modules/expect/build/toThrowMatchers.js:74:11)
+      at Object.throwingMatcher [as toThrow] (node_modules/expect/build/index.js:320:21)
+      at Object.<anonymous> (test/unit/search/providers/bing-search.test.ts:43:8)
+      at Object.<anonymous> (test/unit/search/providers/bing-search.test.ts:43:8)
+
+  ● BingSearchProvider › should initialize with Bing API key
+
+    Bing Search APIは廃止されたため、このプロバイダーは使用できなくなりました。
+
+    [0m [90m  7 |[39m [36mexport[39m [36mclass[39m [33mBingSearchProvider[39m [36mimplements[39m [33mISearchProvider[39m {
+     [90m  8 |[39m   constructor() {
+    [31m[1m>[22m[39m[90m  9 |[39m     [36mthrow[39m [36mnew[39m [33mError[39m([32m'Bing Search APIは廃止されたため、このプロバイダーは使用できなくなりました。'[39m)[33m;[39m
+     [90m    |[39m           [31m[1m^[22m[39m
+     [90m 10 |[39m   }
+     [90m 11 |[39m   
+     [90m 12 |[39m   getName()[33m:[39m string {[0m
+
+      at new BingSearchProvider (src/search/providers/bing-search.ts:9:11)
+      at Object.<anonymous> (test/unit/search/providers/bing-search.test.ts:52:22)
+
+  ● BingSearchProvider › should initialize with Rapid API key
+
+    Bing Search APIは廃止されたため、このプロバイダーは使用できなくなりました。
+
+    [0m [90m  7 |[39m [36mexport[39m [36mclass[39m [33mBingSearchProvider[39m [36mimplements[39m [33mISearchProvider[39m {
+     [90m  8 |[39m   constructor() {
+    [31m[1m>[22m[39m[90m  9 |[39m     [36mthrow[39m [36mnew[39m [33mError[39m([32m'Bing Search APIは廃止されたため、このプロバイダーは使用できなくなりました。'[39m)[33m;[39m
+     [90m    |[39m           [31m[1m^[22m[39m
+     [90m 10 |[39m   }
+     [90m 11 |[39m   
+     [90m 12 |[39m   getName()[33m:[39m string {[0m
+
+      at new BingSearchProvider (src/search/providers/bing-search.ts:9:11)
+      at Object.<anonymous> (test/unit/search/providers/bing-search.test.ts:63:22)
+
+  ● BingSearchProvider › should search via Bing API
+
+    Bing Search APIは廃止されたため、このプロバイダーは使用できなくなりました。
+
+    [0m [90m  7 |[39m [36mexport[39m [36mclass[39m [33mBingSearchProvider[39m [36mimplements[39m [33mISearchProvider[39m {
+     [90m  8 |[39m   constructor() {
+    [31m[1m>[22m[39m[90m  9 |[39m     [36mthrow[39m [36mnew[39m [33mError[39m([32m'Bing Search APIは廃止されたため、このプロバイダーは使用できなくなりました。'[39m)[33m;[39m
+     [90m    |[39m           [31m[1m^[22m[39m
+     [90m 10 |[39m   }
+     [90m 11 |[39m   
+     [90m 12 |[39m   getName()[33m:[39m string {[0m
+
+      at new BingSearchProvider (src/search/providers/bing-search.ts:9:11)
+      at Object.<anonymous> (test/unit/search/providers/bing-search.test.ts:97:22)
+
+  ● BingSearchProvider › should search via Rapid API
+
+    Bing Search APIは廃止されたため、このプロバイダーは使用できなくなりました。
+
+    [0m [90m  7 |[39m [36mexport[39m [36mclass[39m [33mBingSearchProvider[39m [36mimplements[39m [33mISearchProvider[39m {
+     [90m  8 |[39m   constructor() {
+    [31m[1m>[22m[39m[90m  9 |[39m     [36mthrow[39m [36mnew[39m [33mError[39m([32m'Bing Search APIは廃止されたため、このプロバイダーは使用できなくなりました。'[39m)[33m;[39m
+     [90m    |[39m           [31m[1m^[22m[39m
+     [90m 10 |[39m   }
+     [90m 11 |[39m   
+     [90m 12 |[39m   getName()[33m:[39m string {[0m
+
+      at new BingSearchProvider (src/search/providers/bing-search.ts:9:11)
+      at Object.<anonymous> (test/unit/search/providers/bing-search.test.ts:149:22)
+
+  ● BingSearchProvider › should handle empty search results
+
+    Bing Search APIは廃止されたため、このプロバイダーは使用できなくなりました。
+
+    [0m [90m  7 |[39m [36mexport[39m [36mclass[39m [33mBingSearchProvider[39m [36mimplements[39m [33mISearchProvider[39m {
+     [90m  8 |[39m   constructor() {
+    [31m[1m>[22m[39m[90m  9 |[39m     [36mthrow[39m [36mnew[39m [33mError[39m([32m'Bing Search APIは廃止されたため、このプロバイダーは使用できなくなりました。'[39m)[33m;[39m
+     [90m    |[39m           [31m[1m^[22m[39m
+     [90m 10 |[39m   }
+     [90m 11 |[39m   
+     [90m 12 |[39m   getName()[33m:[39m string {[0m
+
+      at new BingSearchProvider (src/search/providers/bing-search.ts:9:11)
+      at Object.<anonymous> (test/unit/search/providers/bing-search.test.ts:184:22)
+
+  ● BingSearchProvider › should handle search errors
+
+    Bing Search APIは廃止されたため、このプロバイダーは使用できなくなりました。
+
+    [0m [90m  7 |[39m [36mexport[39m [36mclass[39m [33mBingSearchProvider[39m [36mimplements[39m [33mISearchProvider[39m {
+     [90m  8 |[39m   constructor() {
+    [31m[1m>[22m[39m[90m  9 |[39m     [36mthrow[39m [36mnew[39m [33mError[39m([32m'Bing Search APIは廃止されたため、このプロバイダーは使用できなくなりました。'[39m)[33m;[39m
+     [90m    |[39m           [31m[1m^[22m[39m
+     [90m 10 |[39m   }
+     [90m 11 |[39m   
+     [90m 12 |[39m   getName()[33m:[39m string {[0m
+
+      at new BingSearchProvider (src/search/providers/bing-search.ts:9:11)
+      at Object.<anonymous> (test/unit/search/providers/bing-search.test.ts:198:22)
+
+FAIL test/unit/models/google-model.test.ts (41.929 s)
+  ● GoogleModel › isConfigured › APIキーが設定されている場合はtrueを返す
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+    [0m [90m 34 |[39m     test([32m'APIキーが設定されている場合はtrueを返す'[39m[33m,[39m () [33m=>[39m {
+     [90m 35 |[39m       process[33m.[39menv[apiKeyEnv] [33m=[39m [32m'test-api-key'[39m[33m;[39m
+    [31m[1m>[22m[39m[90m 36 |[39m       expect(model[33m.[39misConfigured())[33m.[39mtoBe([36mtrue[39m)[33m;[39m
+     [90m    |[39m                                    [31m[1m^[22m[39m
+     [90m 37 |[39m     })[33m;[39m
+     [90m 38 |[39m   })[33m;[39m
+     [90m 39 |[39m[0m
+
+      at Object.<anonymous> (test/unit/models/google-model.test.ts:36:36)
+
+FAIL test/unit/models/anthropic-model.test.ts (41.925 s)
+  ● AnthropicModel › isConfigured › APIキーが設定されている場合はtrueを返す
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+    [0m [90m 34 |[39m     test([32m'APIキーが設定されている場合はtrueを返す'[39m[33m,[39m () [33m=>[39m {
+     [90m 35 |[39m       process[33m.[39menv[apiKeyEnv] [33m=[39m [32m'test-api-key'[39m[33m;[39m
+    [31m[1m>[22m[39m[90m 36 |[39m       expect(model[33m.[39misConfigured())[33m.[39mtoBe([36mtrue[39m)[33m;[39m
+     [90m    |[39m                                    [31m[1m^[22m[39m
+     [90m 37 |[39m     })[33m;[39m
+     [90m 38 |[39m   })[33m;[39m
+     [90m 39 |[39m[0m
+
+      at Object.<anonymous> (test/unit/models/anthropic-model.test.ts:36:36)
+
+FAIL test/unit/models/openai-model.test.ts (42.837 s)
+  ● OpenAIModel › isConfigured › APIキーが設定されている場合はtrueを返す
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+    [0m [90m 34 |[39m     test([32m'APIキーが設定されている場合はtrueを返す'[39m[33m,[39m () [33m=>[39m {
+     [90m 35 |[39m       process[33m.[39menv[apiKeyEnv] [33m=[39m [32m'test-api-key'[39m[33m;[39m
+    [31m[1m>[22m[39m[90m 36 |[39m       expect(model[33m.[39misConfigured())[33m.[39mtoBe([36mtrue[39m)[33m;[39m
+     [90m    |[39m                                    [31m[1m^[22m[39m
+     [90m 37 |[39m     })[33m;[39m
+     [90m 38 |[39m   })[33m;[39m
+     [90m 39 |[39m[0m
+
+      at Object.<anonymous> (test/unit/models/openai-model.test.ts:36:36)
+
+  ● OpenAIModel › モデル名の自動修正 › モデル名が短縮形の場合は正式名に修正
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "gpt-4"
+    Received: "gpt4"
+
+    [0m [90m 46 |[39m     test([32m'モデル名が短縮形の場合は正式名に修正'[39m[33m,[39m () [33m=>[39m {
+     [90m 47 |[39m       [36mconst[39m model [33m=[39m [36mnew[39m [33mOpenAIModel[39m([32m'gpt4'[39m[33m,[39m apiKeyEnv)[33m;[39m
+    [31m[1m>[22m[39m[90m 48 |[39m       expect(model[33m.[39mid)[33m.[39mtoBe([32m'gpt-4'[39m)[33m;[39m
+     [90m    |[39m                        [31m[1m^[22m[39m
+     [90m 49 |[39m     })[33m;[39m
+     [90m 50 |[39m
+     [90m 51 |[39m     test([32m'モデル名にturboが含まれる場合は正式名に修正'[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (test/unit/models/openai-model.test.ts:48:24)
+
+  ● OpenAIModel › モデル名の自動修正 › モデル名にturboが含まれる場合は正式名に修正
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "gpt-4-turbo"
+    Received: "gpt4-turbo"
+
+    [0m [90m 51 |[39m     test([32m'モデル名にturboが含まれる場合は正式名に修正'[39m[33m,[39m () [33m=>[39m {
+     [90m 52 |[39m       [36mconst[39m model [33m=[39m [36mnew[39m [33mOpenAIModel[39m([32m'gpt4-turbo'[39m[33m,[39m apiKeyEnv)[33m;[39m
+    [31m[1m>[22m[39m[90m 53 |[39m       expect(model[33m.[39mid)[33m.[39mtoBe([32m'gpt-4-turbo'[39m)[33m;[39m
+     [90m    |[39m                        [31m[1m^[22m[39m
+     [90m 54 |[39m     })[33m;[39m
+     [90m 55 |[39m   })[33m;[39m
+     [90m 56 |[39m[0m
+
+      at Object.<anonymous> (test/unit/models/openai-model.test.ts:53:24)
+
+
+Test Suites: 14 failed, 7 passed, 21 total
+Tests:       13 failed, 70 passed, 83 total
+Snapshots:   0 total
+Time:        78.227 s
+Ran all test suites matching /^(?!.*e2e).*$/i.

@@ -1,0 +1,71 @@
+version: "1.0"
+
+general:
+  workspace: './workspace'
+  cacheDir: './cache'
+  reportDir: './reports'
+  maxConcurrentTasks: 5
+
+models:
+  default: "claude-3-5-sonnet-20241022"
+  available:
+    - name: "claude-3-7-sonnet-20250219"
+      provider: "ANTHROPIC"
+      apiKeyEnv: "ANTHROPIC_API_KEY"
+      maxTokens: 4096
+      temperature: 0.7
+    - name: "claude-3-5-sonnet-20241022"
+      provider: "ANTHROPIC"
+      apiKeyEnv: "ANTHROPIC_API_KEY"
+      maxTokens: 4096
+      temperature: 0.7
+    - name: "claude-3-5-haiku-20241022"
+      provider: "ANTHROPIC"
+      apiKeyEnv: "ANTHROPIC_API_KEY"
+      maxTokens: 4096
+      temperature: 0.7
+    - name: "gemini-2.0-flash"
+      provider: "GOOGLE"
+      apiKeyEnv: "GOOGLE_API_KEY"
+      maxTokens: 4096
+      temperature: 0.7
+    - name: "gemini-1.5-flash"
+      provider: "GOOGLE"
+      apiKeyEnv: "GOOGLE_API_KEY"
+      maxTokens: 4096
+      temperature: 0.7
+    - name: "gemini-1.5-pro"
+      provider: "GOOGLE"
+      apiKeyEnv: "GOOGLE_API_KEY"
+      maxTokens: 4096
+      temperature: 0.7
+    - name: "gpt-4.5-preview-2025-02-27"
+      provider: "OPENAI"
+      apiKeyEnv: "OPENAI_API_KEY"
+      maxTokens: 4096
+      temperature: 0.7
+    - name: "gpt-4o-2024-08-06"
+      provider: "OPENAI"
+      apiKeyEnv: "OPENAI_API_KEY"
+      maxTokens: 4096
+      temperature: 0.7
+    - name: "gpt-4o-mini-2024-07-18"
+      provider: "OPENAI"
+      apiKeyEnv: "OPENAI_API_KEY"
+      maxTokens: 4096
+      temperature: 0.7
+
+search:
+  maxResults: 10
+  defaultDepth: 2
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
+  rateLimit:
+    requestsPerMinute: 10
+    parallelRequests: 2
+
+logging:
+  level: info
+  file: './logs/app.log'
+  maxSize: 10485760  # 10MB
+  maxFiles: 5
+  chatLog: './logs/chat.log' 
